@@ -1,4 +1,104 @@
-* {
-    padding: 0;
-    margin: 0;
-}
+                        * {
+                            padding: 0;
+                            margin: 0;
+                        }
+                        
+                        main {
+                            position: relative;
+                            background-image: url('imgs/2.jpg');
+                            background-position: center 80%;
+                            height: 100vh;
+                        }
+                        
+                        section {
+                            position: absolute;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            top: 0;
+                            left: 40%;
+                            background-color: rgba(0, 30, 30, 0.5);
+                            width: 20%;
+                            height: 100%;
+                        }
+                        
+                        .game-title {
+                            color: white;
+                            font-family: 'Cormorant SC', serif;
+                            font-size: 3.4rem;
+                            padding-top: 40%;
+                            text-align: center;
+                            width: 160%;
+                        }
+                        
+                        .question {
+                            color: rgba(255, 255, 255, 0.8);
+                            font-family: 'Barlow', sans-serif;
+                            font-size: 1.3rem;
+                            text-align: center;
+                            padding-top: 20%;
+                        }
+                        
+                        .carrousel {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            text-align: center;
+                            width: 122%;
+                            padding-top: 2%;
+                        }
+                        
+                        .left {
+                            transform: rotate(-90deg);
+                        }
+                        
+                        .location {
+                            color: white;
+                            font-family: 'Cormorant SC';
+                            font-size: 1.8rem;
+                        }
+                        
+                        .right {
+                            transform: rotate(90deg);
+                        }
+                        
+                        form {
+                            padding-top: 5%;
+                        }
+                        
+                        .input {
+                            border: none;
+                            background-color: rgba(83, 194, 202, 0.5);
+                            width: 160px;
+                            height: 50px;
+                        }
+                        
+                        .input[type=text]:focus {
+                            background-color: rgba(255, 255, 255, 0.5);
+                        }
+                        
+                        .btn {
+                            border: 1px solid white;
+                            background-color: transparent;
+                            color: white;
+                            font-family: 'Barlow', sans-serif;
+                            font-size: 1.4rem;
+                            width: 160px;
+                            height: 50px;
+                        }
+                        
+                        .copyright {
+                            font-family: 'Cormorant SC', serif;
+                            font-size: 1.2rem;
+                            text-align: center;
+                            padding-top: 70%;
+                        }
+                        
+                        a {
+                            color: white;
+                            text-decoration: none;
+                        }
+                        
+                        a:hover {
+                            color: turquoise;
+                        }
