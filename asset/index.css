@@ -5,10 +5,22 @@
 
 main {
     position: relative;
-    background-image: url('imgs/2.jpg');
-    background-position: center 80%;
     height: 100vh;
+    width: 100vw;
 }
+
+.slide-bg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: left bottom;
+}
+
+/* SLIDE BACKGROUND */
+
+
+
 
 section {
     position: absolute;
@@ -39,7 +51,9 @@ section {
     padding-top: 20%;
 }
 
-.carrousel {
+/* CAROUSEL TEXT */
+
+.carousel__text {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -48,31 +62,33 @@ section {
     padding-top: 2%;
 }
 
-.previous {
+.carousel__btn--previous {
     transform: rotate(-90deg);
 }
 
-.previous:hover {
-    filter: drop-shadow(0px 0px 6px turquoise);
+.carousel__btn--previous:hover {
+    filter: drop-shadow(0px 0px 6px black);
     height: 47px;
 }
 
-.location {
+.carousel__location {
     color: white;
     font-family: 'Cormorant SC';
     font-size: 1.8rem;
 }
 
-.next {
+.carousel__location--hidden {
+    display: none;
+}
+
+.carousel__btn--next {
     transform: rotate(90deg);
 }
 
-.next:hover {
-    filter: drop-shadow(0px 0px 6px turquoise);
+.carousel__btn--next:hover {
+    filter: drop-shadow(0px 0px 6px black);
     height: 47px;
 }
-
-img:hover {}
 
 form {
     padding-top: 5%;

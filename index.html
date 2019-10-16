@@ -13,7 +13,8 @@
 
 <body>
 
-    <main>
+    <main class="slide">
+        <img class="slide-bg" src="asset/imgs/1.jpg" alt="">
 
         <!-- <ul>
             <li>Son Doong</li>
@@ -28,22 +29,31 @@
 
             <p class="question">Trouver le juste prix du voyage au:</p>
 
-            <div class="carrousel">
-                <img class="previous" src="asset/imgs/icon-arrow.png" alt="">
-                <p class="location">Mu Cang Chai</p>
-                <img class="next" src="asset/imgs/icon-arrow.png" alt="">
+            <div class="carousel__text">
+                <img class="carousel__btn carousel__btn--previous" src="asset/imgs/icon-arrow.png" alt="">
+                <p class="carousel__location">Mu Cang Chai</p>
+                <p class="carousel__location carousel__location--hidden">Ba Na</p>
+                <p class="carousel__location carousel__location--hidden">Hoi An</p>
+                <p class="carousel__location carousel__location--hidden">Son Doong</p>
+                <p class="carousel__location carousel__location--hidden">Ha Long</p>
+                <img class="carousel__btn carousel__btn--next" src="asset/imgs/icon-arrow.png" alt="">
             </div>
 
             <form action="">
                 <input class="input" type="text" value="">
                 <br>
-                <input class="btn" type="button" value="OK">
+                <button class="btn" type="button">
+                OK
+                </button>
             </form>
 
             <p class="copyright"><a href="tuyen.fr">Copy Right By Tuyen.fr</a></p>
         </section>
 
     </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.js"></script>
+    <script src="main.js"></script> 
 
 </body>
 
