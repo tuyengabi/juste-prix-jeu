@@ -24,7 +24,7 @@ section {
     align-items: center;
     top: 0;
     left: 40%;
-    background-color: rgba(0, 30, 30, 0.5);
+    background-color: rgba(0, 30, 30, 0.6);
     width: 20%;
     height: 100%;
 }
@@ -33,22 +33,34 @@ section {
     color: white;
     font-family: 'Cormorant SC', serif;
     font-size: 3.4rem;
-    padding-top: 40%;
+    padding-top: 22%;
     text-align: center;
     width: 160%;
 }
 
-.question {
+.count {
+    font-size: 5rem;
+    font-family: 'Barlow';
+    color: rgba(74, 253, 235, 0.8);
+}
+
+.text {
     color: rgba(255, 255, 255, 0.8);
     font-family: 'Barlow', sans-serif;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
     text-align: center;
-    padding-top: 20%;
+    padding: 4% 0 4% 0;
+}
+
+.turquoise {
+    color: rgba(74, 253, 235, 0.8);
+    padding: 0 0 4% 0;
+    font-size: 1.2rem;
 }
 
 /* CAROUSEL TEXT */
 
-.carousel__text {
+.carousel__name {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -133,4 +145,37 @@ a {
 
 a:hover {
     color: turquoise;
+}
+
+@media screen and (min-width: 0px) and (max-width: 900px) {
+
+
+    section {
+        top: 0;
+        left: 10%;
+        width: 80%;
+        height: 100%;
+    }
+    .game-title {
+        font-size: 3rem;
+        width: 100%;
+        padding-top: 16%;
+    }
+
+    .text {
+        font-size: 1.1rem;
+    }
+
+    .carousel__name {
+        
+        width: 120%;
+    }
+
+    .carousel__location {
+        font-size: 1.4rem;
+    }
+
+    .copyright {
+        padding-top: 30%;
+    }
 }
