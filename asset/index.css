@@ -141,7 +141,7 @@ form {
     font-size: 1.2rem;
     text-align: center;
     top: 800px;
-    left 0;
+    width: 100%;
 }
 
 a {
@@ -187,7 +187,7 @@ a:hover {
 
     .copyright {
         top: 600px;
-        left 0;
+        width: 100%;;
         font-size: 1rem;
     }
 }
@@ -226,7 +226,7 @@ a:hover {
 
     .copyright {
         top: 600px;
-        left 0;
+        width: 100%;
         font-size: 1rem;
     }
 }
@@ -252,7 +252,7 @@ a:hover {
 
     .copyright {
         top: 700px;
-        left 0;
+        width: 100%;
         font-size: 1rem;
     }
 
@@ -279,7 +279,7 @@ a:hover {
 
     .copyright {
         top: 700px;
-        left 0;
+        width: 100%;
         font-size: 1rem;
     }
 }
@@ -287,3 +287,4 @@ a:hover {
 .before-start {
     visibility: hidden ;
 }
+
