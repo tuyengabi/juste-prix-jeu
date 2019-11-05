@@ -59,6 +59,8 @@ section {
     font-size: 1.2rem;
 }
 
+
+
 /* CAROUSEL TEXT */
 
 .carousel__name {
@@ -85,9 +87,8 @@ section {
     font-size: 1.8rem;
 }
 
-.carousel__location--hidden, 
-.carousel__bg--hidden,
-.before-start {
+.carousel__location--hidden,
+.carousel__bg--hidden {
     display: none;
 }
 
@@ -160,6 +161,7 @@ a:hover {
         width: 80%;
         height: 100%;
     }
+
     .game-title {
         font-size: 3rem;
         width: 100%;
@@ -175,7 +177,7 @@ a:hover {
     }
 
     .carousel__name {
-        
+
         width: 120%;
     }
 
@@ -198,6 +200,7 @@ a:hover {
         width: 80%;
         height: 100%;
     }
+
     .game-title {
         font-size: 3rem;
         width: 100%;
@@ -213,7 +216,7 @@ a:hover {
     }
 
     .carousel__name {
-        
+
         width: 120%;
     }
 
@@ -256,7 +259,7 @@ a:hover {
 }
 
 @media screen and (min-width: 1367px) and (max-width: 1600px) {
-    
+
     .game-title {
         font-size: 4rem;
         width: 180%;
@@ -279,4 +282,8 @@ a:hover {
         left 0;
         font-size: 1rem;
     }
+}
+
+.before-start {
+    visibility: hidden ;
 }
