@@ -30,15 +30,15 @@ function startTimer(duration, display) {
         display.textContent = minutes + ":" + seconds;
 
         if (--timer < 0) {
-            timer = duration;
+            timer = 0;
         }
     }, 1000);
 }
 
 document.getElementById("btnStart").addEventListener("click", function () {
-    var fiveMinutes = 60 * 0.5,
+    var countSec = 60 * 0.5,
         display = document.querySelector('#count');
-    startTimer(fiveMinutes, display);
+    startTimer(countSec, display);
 });
 
 document.getElementById("btnStart").addEventListener("click", function () {
@@ -46,7 +46,7 @@ document.getElementById("btnStart").addEventListener("click", function () {
 });
 
 document.getElementById("btnStart").addEventListener("click", function () {
-    document.getElementById("hint").innerHTML = "est entre 700 et 720";
+    document.getElementById("hint").innerHTML = "est entre 780 et 800";
 });
 
 document.getElementById("btnStart").addEventListener("click", function () {

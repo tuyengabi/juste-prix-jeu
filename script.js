@@ -1,4 +1,4 @@
-let prixMystere = determinerPrixMystere(700, 720);
+let prixMystere = determinerPrixMystere(780, 800);
 let ok = document.getElementById("btnPlay");
 let compteur = 0;
 
@@ -11,10 +11,10 @@ function determinerPrixMystere(min, max) {
 
 function leJeu() {
     var champSaisi = document.getElementById("input").value;
-    if (compteur < 3) {
+    if (compteur < 2) {
         calculProposition(champSaisi, prixMystere);
     } else {
-        afficherMesssage("message", "c'est perdu !" + " " + prixMystere);
+        afficherMesssage("message", "C'est perdu !" + " " + prixMystere);
     }
 
 }
@@ -22,13 +22,13 @@ function leJeu() {
 function calculProposition(prixPropose, prixATrouve) {
 
     if (prixPropose < prixATrouve) {
-        afficherMesssage("message", "c'est plus !");
+        afficherMesssage("message", "C'est plus !");
         compteur = compteur + 1;
     } else if (prixPropose > prixATrouve) {
-        afficherMesssage("message", "c'est moins !");
+        afficherMesssage("message", "C'est moins !");
         compteur = compteur + 1;
     } else {
-        afficherMesssage("message", "c'est gagné !");
+        afficherMesssage("message", "C'est gagné !");
     }
 
 
