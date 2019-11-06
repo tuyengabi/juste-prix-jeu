@@ -1,4 +1,4 @@
-"use strict";
+
 
 document.getElementById("btnStart").addEventListener("click", function () {
     document.getElementById("count").innerHTML = "30";
