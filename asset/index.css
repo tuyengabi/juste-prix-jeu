@@ -137,11 +137,11 @@ form {
 
 .copyright {
     position: fixed;
-    font-family: 'Cormorant SC', serif;
-    font-size: 1.2rem;
-    text-align: center;
-    top: 800px;
+    bottom: 20px;
     width: 100%;
+    text-align: center;
+    font-family: 'Cormorant SC', serif;
+    font-size: 1rem;
 }
 
 a {
@@ -185,11 +185,7 @@ a:hover {
         font-size: 1.4rem;
     }
 
-    .copyright {
-        top: 600px;
-        width: 100%;;
-        font-size: 1rem;
-    }
+
 }
 
 @media screen and (min-width: 501px) and (max-width: 1024px) {
@@ -224,11 +220,7 @@ a:hover {
         font-size: 1.4rem;
     }
 
-    .copyright {
-        top: 600px;
-        width: 100%;
-        font-size: 1rem;
-    }
+
 }
 
 @media screen and (min-width: 1025px) and (max-width: 1366px) {
@@ -250,11 +242,7 @@ a:hover {
         font-size: 1.6rem;
     }
 
-    .copyright {
-        top: 700px;
-        width: 100%;
-        font-size: 1rem;
-    }
+
 
 }
 
@@ -277,11 +265,7 @@ a:hover {
         font-size: 1.8rem;
     }
 
-    .copyright {
-        top: 700px;
-        width: 100%;
-        font-size: 1rem;
-    }
+
 }
 
 .before-start {
