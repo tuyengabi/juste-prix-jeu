@@ -9,7 +9,7 @@ document.getElementById("btnStart").addEventListener("click", function () {
 });
 
 document.getElementById("btnStart").addEventListener("click", function () {
-    document.getElementById("hint").innerHTML = "est entre 700 et 800";
+    document.getElementById("hint").innerHTML = "est entre 700 et 720";
 });
 
 document.getElementById("btnStart").addEventListener("click", function () {
