@@ -54,9 +54,12 @@ document.getElementById("btnStart").addEventListener("click", function () {
 });
 
 document.getElementById("btnStart").addEventListener("click", function () {
-    document.getElementById("btnStart").innerHTML = "OK";
+    document.getElementById("btnStart").style.display = "none";
 });
 
+document.getElementById("btnStart").addEventListener("click", function () {
+    document.getElementById("btnPlay").style.visibility = "visible";
+});
 
 
 

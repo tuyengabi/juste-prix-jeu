@@ -1,5 +1,5 @@
 let prixMystere = determinerPrixMystere(700, 720);
-let ok = document.getElementById("btnJouer");
+let ok = document.getElementById("btnPlay");
 let compteur = 0;
 
 ok.addEventListener("click", leJeu, false);
