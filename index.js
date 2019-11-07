@@ -31,6 +31,7 @@ function startTimer(duration, display) {
 
         if (--timer < 0) {
             timer = 0;
+            alert('ythtbynby');
         }
     }, 1000);
 }

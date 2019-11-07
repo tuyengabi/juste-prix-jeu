@@ -11,7 +11,7 @@ function determinerPrixMystere(min, max) {
 
 function leJeu() {
     var champSaisi = document.getElementById("input").value;
-    if (compteur < 2) {
+    if (compteur < 9) {
         calculProposition(champSaisi, prixMystere);
     } else {
         afficherMesssage("message", "C'est perdu !" + " " + prixMystere);
@@ -28,7 +28,7 @@ function calculProposition(prixPropose, prixATrouve) {
         afficherMesssage("message", "C'est moins !");
         compteur = compteur + 1;
     } else {
-        afficherMesssage("message", "C'est gagné !");
+        afficherMesssage("message", "Vous etes gagné un vacance!");
     }
 
 
