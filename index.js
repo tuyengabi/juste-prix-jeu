@@ -1,21 +1,4 @@
-// let timer = countdown();
 
-
-
-// document.getElementById("btnStart").addEventListener("click", function () {
-//     document.getElementById("count").innerHTML = timer;
-// });
-
-
-
-// function countdown() {
-
-//     for (let sec = 30; sec > 0; sec--) {
-//         console.log(sec);
-//     }
-
-    
-// }
 
 
 function startTimer(duration, display) {
