@@ -3,6 +3,8 @@ AOS.init({
     duration: 2000,
 })
 
+
+// des fonctions de jeu
 let prixMystere = determinerPrixMystere(780, 800);
 let ok = document.getElementById("btnPlay");
 let compteur = 0;
@@ -36,13 +38,14 @@ function calculProposition(prixPropose, prixATrouve) {
         afficherMesssage("message", "Vous etes gagné un vacance!");
     }
 
-
 }
 
 function afficherMesssage(identifiant, messageText) {
     return document.getElementById(identifiant).innerHTML = messageText;
 }
 
+
+//des fonctions de temp
 function startTimer(duration, display) {
     let timer = duration, minutes, seconds;
     setInterval(function () {
@@ -56,7 +59,7 @@ function startTimer(duration, display) {
 
         if (--timer < 0) {
             timer = 0;
-            
+
         }
     }, 1000);
 }
@@ -67,6 +70,8 @@ document.getElementById("btnStart").addEventListener("click", function () {
     startTimer(countSec, display);
 });
 
+
+//des fonctions de commencer le jeu
 document.getElementById("btnStart").addEventListener("click", function () {
     document.getElementById("text").innerHTML = "secondes";
 });
@@ -87,8 +92,29 @@ document.getElementById("btnStart").addEventListener("click", function () {
     document.getElementById("btnPlay").style.visibility = "visible";
 });
 
-document.querySelector('#rightArrow').addEventListener('click',function(e){
-    document.getElementById('imgBg1').classList.add('carousel__bg--hidden');
+function toto (e) {
+    //je récupere tout les bg
+    let lstCarousel = document.querySelectorAll('.carousel__bg');
+    let majFait = false;
+    //je parcours ma liste
+    lstCarousel.forEach(
+        function (item, index) {
+            //si je ne retrouve pas la classe carousel__bg--hidden, je lui ajoute et je la retire pour le suivant
+            if (item.classList.contains('carousel__bg--hidden') === false && majFait === false) {
+                //si je suis à l'index maximal => je retourne à 0 sinon je vais au suivant
+                if (index === lstCarousel.length - 1) {
+                    index = 0;
+                }
+                //je retire la clas carousel__bg--hidden du bg actuel 
+                item.classList.add('carousel__bg--hidden');
+                // j'ajoute carousel__bg--hidden au suivant
+                lstCarousel[index + 1].classList.remove('carousel__bg--hidden')
+                //on force la sortie de la boucle pou faire l'opértion juste une suel fois
+                majFait = true;
+            }
+        }
+    );
+}
+// des fonction de carousel carousel
+document.querySelector('#rightArrow').addEventListener('click',toto);
 
-    document.getElementById('imgBg2').classList.remove('carousel__bg--hidden');
-})
