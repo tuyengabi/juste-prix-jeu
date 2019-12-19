@@ -92,7 +92,11 @@ document.getElementById("btnStart").addEventListener("click", function () {
     document.getElementById("btnPlay").style.visibility = "visible";
 });
 
-function toto (e) {
+
+
+
+// des fonction de carousel 
+function nextBg (e) {
     //je récupere tout les bg
     let lstCarousel = document.querySelectorAll('.carousel__bg');
     let majFait = false;
@@ -115,6 +119,33 @@ function toto (e) {
         }
     );
 }
-// des fonction de carousel carousel
-document.querySelector('#rightArrow').addEventListener('click',toto);
+
+
+function previousBg (e) {
+    //je récupere tout les bg
+    let lstCarousel = document.querySelectorAll('.carousel__bg');
+    let majFait = false;
+    //je parcours ma liste
+    lstCarousel.forEach(
+        function (item, index) {
+            //si je ne retrouve pas la classe carousel__bg--hidden, je lui ajoute et je la retire pour le suivant
+            if (item.classList.contains('carousel__bg--hidden') === false && majFait === false) {
+                //si je suis à l'index maximal => je retourne à 0 sinon je vais au suivant
+                if (index === 0) {
+                    index = lstCarousel.length - 1;
+                }
+                //je retire la clas carousel__bg--hidden du bg actuel 
+                item.classList.add('carousel__bg--hidden');
+                // j'ajoute carousel__bg--hidden au suivant
+                lstCarousel[index - 1].classList.remove('carousel__bg--hidden')
+                //on force la sortie de la boucle pou faire l'opértion juste une suel fois
+                majFait = true;
+            }
+        }
+    );
+}
+
+document.getElementsByClassName('carousel__btn--next')[0].addEventListener('click',nextBg);
+
+document.getElementsByClassName('carousel__btn--previous')[0].addEventListener('click',previousBg);
 
