@@ -93,9 +93,9 @@ document.getElementById("btnStart").addEventListener("click", function () {
 });
 
 
+// des fonction de carousel
 
-
-// des fonction de carousel 
+//function next background
 function nextBg (e) {
     //je récupere tout les bg
     let lstBgCarousel = document.querySelectorAll('.carousel__bg');
@@ -118,9 +118,9 @@ function nextBg (e) {
             }
         }
     );
-}
+};
 
-
+// function previous background
 function previousBg (e) {
     //je récupere tout les bg
     let lstBgCarousel = document.querySelectorAll('.carousel__bg');
@@ -143,43 +143,69 @@ function previousBg (e) {
             }
         }
     );
-}
+};
 
-
+// function next location
 function nextLocation (e) {
-    //je récupere tout les bg
+    //je récupere tout les noms de locations
     let lstLocationCarousel = document.querySelectorAll('.carousel__location');
     let majFait = false;
     //je parcours ma liste
     lstLocationCarousel.forEach(
         function (item, index) {
-            //si je ne retrouve pas la classe carousel__bg--hidden, je lui ajoute et je la retire pour le suivant
+            //si je ne retrouve pas la classe carousel__location--hidden, je lui ajoute et je la retire pour le suivant
             if (item.classList.contains('carousel__location--hidden') === false && majFait === false) {
                 //si je suis à l'index maximal => je retourne à 0 sinon je vais au suivant
                 if (index === lstLocationCarousel.length - 1) {
                     index = 0;
                 }
-                //je retire la clas carousel__bg--hidden du bg actuel 
+                //je retire la clas carousel__location--hidden du bg actuel 
                 item.classList.add('carousel__location--hidden');
-                // j'ajoute carousel__bg--hidden au suivant
+                // j'ajoute carousel__location--hidden au suivant
                 lstLocationCarousel[index + 1].classList.remove('carousel__location--hidden')
                 //on force la sortie de la boucle pou faire l'opértion juste une suel fois
                 majFait = true;
             }
         }
     );
-}
+};
+
+//function previous location
+function previousLocation (e) {
+    //je récupere tout les noms de locations
+    let lstLocationCarousel = document.querySelectorAll('.carousel__location');
+    let majFait = false;
+    //je parcours ma liste
+    lstLocationCarousel.forEach(
+        function (item, index) {
+            //si je ne retrouve pas la classe carousel__location--hidden, je lui ajoute et je la retire pour le suivant
+            if (item.classList.contains('carousel__location--hidden') === false && majFait === false) {
+                //si je suis à l'index maximal => je retourne à 0 sinon je vais au suivant
+                if (index === 0) {
+                    index = lstLocationCarousel.length - 1;
+                }
+                //je retire la clas carousel__location--hidden du bg actuel 
+                item.classList.add('carousel__location--hidden');
+                // j'ajoute carousel__location--hidden au suivant
+                lstLocationCarousel[index - 1].classList.remove('carousel__location--hidden')
+                //on force la sortie de la boucle pou faire l'opértion juste une suel fois
+                majFait = true;
+            }
+        }
+    );
+};
 
 function nextCarousel() {
     nextBg();
     nextLocation();
-}
+};
 
 function previousCarousel() {
     previousBg();
     previousLocation();
-}
+};
 
+//je appelle mes fonction à mes button next et previous
 document.getElementsByClassName('carousel__btn--next')[0].addEventListener('click',nextCarousel);
 
 document.getElementsByClassName('carousel__btn--previous')[0].addEventListener('click',previousCarousel);
