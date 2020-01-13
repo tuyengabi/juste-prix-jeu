@@ -194,6 +194,10 @@ a:hover {
         font-size: 1.4rem;
     }
 
+    #message {
+        font-size: 1.5rem;
+    }
+
 
 }
 
@@ -229,6 +233,10 @@ a:hover {
         font-size: 1.4rem;
     }
 
+    #message {
+        font-size: 1.7rem;
+    }
+
 
 }
 
@@ -240,7 +248,7 @@ a:hover {
     }
 
     .text {
-        font-size: 1.3rem;
+        font-size: 1.1rem;
     }
 
     .turquoise {
@@ -251,6 +259,9 @@ a:hover {
         font-size: 1.6rem;
     }
 
+    #message {
+        font-size: 1.7rem;
+    }
 
 
 }
