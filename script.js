@@ -11,12 +11,17 @@ let compteur = 0;
 
 ok.addEventListener("click", leJeu, false);
 console.log(prixMystere);
-
+document.querySelector("form").addEventListener("submit", e => {
+    e.preventDefault()
+    console.log('submit');
+    leJeu()
+});
 function determinerPrixMystere(min, max) {
     return Math.round(Math.random() * (max - min) + min);
 }
 
 function leJeu() {
+  console.warn('inside lejeu');
     var champSaisi = document.getElementById("input").value;
     if (compteur < 9) {
         calculProposition(champSaisi, prixMystere);
@@ -30,7 +35,7 @@ function calculProposition(prixPropose, prixATrouve) {
 
     if (prixPropose < prixATrouve) {
         afficherMesssage("message", "C'est plus !");
-        compteur = compteur + 1;
+        compteur += 1;
     } else if (prixPropose > prixATrouve) {
         afficherMesssage("message", "C'est moins !");
         compteur = compteur + 1;
@@ -109,7 +114,7 @@ function nextBg (e) {
                 if (index === lstBgCarousel.length - 1) {
                     index = 0;
                 }
-                //je retire la clas carousel__bg--hidden du bg actuel 
+                //je retire la clas carousel__bg--hidden du bg actuel
                 item.classList.add('carousel__bg--hidden');
                 // j'ajoute carousel__bg--hidden au suivant
                 lstBgCarousel[index + 1].classList.remove('carousel__bg--hidden')
@@ -134,7 +139,7 @@ function previousBg (e) {
                 if (index === 0) {
                     index = lstBgCarousel.length - 1;
                 }
-                //je retire la clas carousel__bg--hidden du bg actuel 
+                //je retire la clas carousel__bg--hidden du bg actuel
                 item.classList.add('carousel__bg--hidden');
                 // j'ajoute carousel__bg--hidden au suivant
                 lstBgCarousel[index - 1].classList.remove('carousel__bg--hidden')
@@ -159,7 +164,7 @@ function nextLocation (e) {
                 if (index === lstLocationCarousel.length - 1) {
                     index = 0;
                 }
-                //je retire la clas carousel__location--hidden du bg actuel 
+                //je retire la clas carousel__location--hidden du bg actuel
                 item.classList.add('carousel__location--hidden');
                 // j'ajoute carousel__location--hidden au suivant
                 lstLocationCarousel[index + 1].classList.remove('carousel__location--hidden')
@@ -184,7 +189,7 @@ function previousLocation (e) {
                 if (index === 0) {
                     index = lstLocationCarousel.length - 1;
                 }
-                //je retire la clas carousel__location--hidden du bg actuel 
+                //je retire la clas carousel__location--hidden du bg actuel
                 item.classList.add('carousel__location--hidden');
                 // j'ajoute carousel__location--hidden au suivant
                 lstLocationCarousel[index - 1].classList.remove('carousel__location--hidden')
@@ -209,4 +214,3 @@ function previousCarousel() {
 document.getElementsByClassName('carousel__btn--next')[0].addEventListener('click',nextCarousel);
 
 document.getElementsByClassName('carousel__btn--previous')[0].addEventListener('click',previousCarousel);
-

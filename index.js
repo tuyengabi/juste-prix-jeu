@@ -14,11 +14,14 @@ function startTimer(duration, display) {
 
         if (--timer < 0) {
             timer = 0;
-            alert('ythtbynby');
+
         }
     }, 1000);
 }
-
+document.querySelector("form").addEventListener("submit", e => {
+    e.preventDefault()
+    console.log('submit');
+});
 document.getElementById("btnStart").addEventListener("click", function () {
     var countSec = 60 * 0.5,
         display = document.querySelector('#count');
@@ -44,10 +47,3 @@ document.getElementById("btnStart").addEventListener("click", function () {
 document.getElementById("btnStart").addEventListener("click", function () {
     document.getElementById("btnPlay").style.visibility = "visible";
 });
-
-
-
-
-
-
-
